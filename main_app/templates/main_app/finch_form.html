@@ -5,7 +5,11 @@ Add Finch
 {% endblock title %}
 
 {% block content %}
-<h1 class="mb-5">Add/Edit Finch</h1>
+{% if object %}
+  <h1 class="mb-5">Edit: <span class="text-light-blue">{{object.name}}</span></h1>
+{% else %}
+  <h1 class="mb-5">Add Finch</h1>
+{% endif %}
 
 <div class="page-content">
     <form action="" method="POST">
@@ -13,7 +17,7 @@ Add Finch
         <table>
           {{ form.as_table }}
         </table>
-        <input type="submit" value="Submit" class="btn">
+        <input type="submit" value="Submit" class="btn btn-info mt-5">
     </form>
 </div>
 
