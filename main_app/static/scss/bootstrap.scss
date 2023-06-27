@@ -1,4 +1,16 @@
 // node-sass --output-style compressed main_app/static/scss/bootstrap.scss -o main_app/static/css
 
+$theme-colors: (
+  "primary": #050f23,
+  "secondary": #4a5858,
+  "accent": #986b09,
+  "success": #28A745,
+  "info": #005193,
+  "warning": #a15504,
+  "danger": #9c0f1b,
+  "light": #e7e7e7,
+  "dark": #1c1d1e
+);
+
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
