@@ -40,3 +40,13 @@ a.finch{
 .item-content:hover{
     background-color: rgb(129, 143, 148);
 }
+
+table > tbody > tr > th > label {
+    min-width: 10rem;
+}
+
+table > tbody > tr > td > input, table > tbody > tr > td > textarea {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+}

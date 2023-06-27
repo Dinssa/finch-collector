@@ -9,7 +9,7 @@ Add Finch
 
 <div class="page-content">
     <h4>Are you sure you want to delete <span class="text-light-blue">{{object.name}}</span>?</h4>
-    <form action="" method="POST" class="mt-5">
+    <form action="" method="POST" class="mt-4">
         {% csrf_token %}
         <input type="submit" value="Yes" class="btn btn-success text-white">
         <a href="{% url 'detail' finch.id %}" class="btn btn-danger">Cancel</a>
