@@ -11,7 +11,7 @@ class Finch(models.Model):
     age = models.IntegerField()
 
     def __str__(self):
-        return f'{self.name} ({self.id})'
+        return f'{self.name} ({self.pk})'
     
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'finch_id': self.id})
+        return reverse('detail', kwargs={'pk': self.pk})
