@@ -1,0 +1,12 @@
+
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav > ul > li > a {
+    min-width: 7rem;
+}
