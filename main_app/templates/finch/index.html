@@ -22,10 +22,16 @@ Finches
                             <p>Species: {{finch.species}}</p>
                             <p>Age: {{finch.age}}</p>
                         </div>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </a>
+        <div class="">
+            <div class="card-action d-flex justify-content-end align-content-center">
+                <a class="btn btn-info text-white" href="{% url 'finch_update' finch.id %}">Edit</a>
+                <a class="ms-2 btn btn-danger" href="{% url 'finch_delete' finch.id %}">Delete</a>
+            </div>
+        </div>
     </div>
     {% endfor %}
 </div>

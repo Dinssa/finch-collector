@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add Finch
+{% endblock title %}
+
+{% block content %}
+<h1 class="mb-5">Add/Edit Finch</h1>
+
+<div class="page-content">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+          {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</div>
+
+{% endblock content %}
