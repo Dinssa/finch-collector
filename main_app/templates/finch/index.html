@@ -5,5 +5,27 @@ Finches
 {% endblock title %}#
 
 {% block content %}
-<h1>Finches</h1>
+<h1 class="mb-5">Finches</h1>
+
+<div class="page-content">
+    {% for finch in finches %}
+    <div class="item">
+        <div class="item-content p-3 my-3 bg-secondary">
+            <div class="content">
+                <div class="row">
+                    <div class="col-8">
+                        <p class="item-title letter-spacing-1">{{ finch.name }}</p>
+                        <p>Description: {{finch.description}}</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Species: {{finch.species}}</p>
+                        <p>Age: {{finch.age}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock content %}

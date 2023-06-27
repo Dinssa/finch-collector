@@ -15,4 +15,4 @@ def about(request):
     return render(request, 'about.html')
 
 def finch_index(request):
-    return render(request, 'finch/index.html')
+    return render(request, 'finch/index.html', {'finches': finches})
