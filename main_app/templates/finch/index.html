@@ -2,7 +2,7 @@
 
 {% block title %}
 Finches
-{% endblock title %}#
+{% endblock title %}
 
 {% block content %}
 <h1 class="mb-5">Finches</h1>
@@ -10,20 +10,22 @@ Finches
 <div class="page-content">
     {% for finch in finches %}
     <div class="item">
-        <div class="item-content p-3 my-3 bg-secondary">
-            <div class="content">
-                <div class="row">
-                    <div class="col-8">
-                        <p class="item-title letter-spacing-1">{{ finch.name }}</p>
-                        <p>Description: {{finch.description}}</p>
-                    </div>
-                    <div class="col-4">
-                        <p>Species: {{finch.species}}</p>
-                        <p>Age: {{finch.age}}</p>
+        <a href="/finch/{{ finch.id }}" class="finch">
+            <div class="item-content p-3 my-3">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-8">
+                            <p class="item-title letter-spacing-1">{{ finch.name }}</p>
+                            <p>Description: {{finch.description}}</p>
+                        </div>
+                        <div class="col-4">
+                            <p>Species: {{finch.species}}</p>
+                            <p>Age: {{finch.age}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
     {% endfor %}
 </div>

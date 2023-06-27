@@ -27,3 +27,16 @@ main {
 .text-right{
     text-align: right;
 }
+
+a.finch{
+    color: #fff;
+    text-decoration: none;
+}
+
+.item-content{
+    background-color: #6C757D;
+}
+
+.item-content:hover{
+    background-color: rgb(129, 143, 148);
+}
