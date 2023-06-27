@@ -16,10 +16,11 @@
     </title>
 </head>
 <body class="bg-dark text-white">
-    <nav class="bg-light">
-        <ul class="d-flex align-content-center justify-content-center">
-            <li><a class="p-3 m-3 btn btn-dark" href="{% url 'home' %}">Home</a></li>
-            <li><a class="p-3 m-3 btn btn-dark" href="{% url 'about' %}">About</a></li>
+    <nav class="bg-light d-flex align-content-center justify-content-between">
+        <h1 class="p-3 m-3 fw-bolder text-dark letter-spacing-1">Finch Collector</h1>
+        <ul class="my-auto d-flex align-content-center justify-content-center">
+            <li><a class="p-3 m-3 me-0 btn btn-dark" href="{% url 'home' %}">Home</a></li>
+            <li><a class="p-3 m-3 me-0 btn btn-dark" href="{% url 'about' %}">About</a></li>
             <li><a class="p-3 m-3 btn btn-dark" href="{% url 'finch_index' %}">Finches</a></li>
         </ul>
     </nav>
@@ -27,8 +28,8 @@
         {% block content %}
         {% endblock content %}
     </main>
-    <footer>
-
+    <footer class="text-right bg-light text-dark">
+        <p class="me-3 mt-3">© 2023 Finch Collector | Emanuel Dinssa</p>
     </footer>
 </body>
 </html>
