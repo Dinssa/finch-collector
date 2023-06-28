@@ -6,13 +6,42 @@ Finches
 
 {% block content %}
 
-<div class="page-content d-flex justify-content-center align-content-center">
-    <div class="my-auto bg-secondary p-4 rounded">
-        <h1 class="mb-5 text-center">{{finch.name}} </h1>
-        <h5 class="mb-5">{{finch.description}}</h5>
-        <p>Species: {{finch.species}}</p>
-        <p>Age: {{finch.age}}</p>
-    </div>
+<div class="page-content d-flex flex-column justify-content-center align-content-center">
+    <div class="row">
+        <div class="col-6">
+            <div class="bg-secondary p-4 rounded">
+                <h1 class="mb-5 text-center">{{finch.name}} </h1>
+                <h5 class="mb-5">{{finch.description}}</h5>
+                <p>Species: {{finch.species}}</p>
+                <p>Age: {{finch.age}}</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mt-4 d-flex flex-column justify-content-center align-content-center">
+                <form method="POST" class="mb-3">
+                    {% csrf_token %}
+                    {{ feeding_form.as_p }}
+                    <input type="submit" class="btn btn-info" value="Add Feeding">
+                </form>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Meal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for feeding in finch.feeding_set.all %}
+                        <tr>
+                            <td>{{feeding.date}}</td>
+                            <td>{{feeding.get_meal_display}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> 
 </div>
 
 {% endblock content %}
