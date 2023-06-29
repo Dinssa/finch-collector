@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from datetime import date
 
 MEALS = (
     ('B', 'Breakfast'),
@@ -21,7 +22,7 @@ class Finch(models.Model):
         return reverse('detail', kwargs={'finch_id': self.id})
     
 class Feeding(models.Model):
-    date = models.DateField('feeding date')
+    date = models.DateField('feeding date', default=date.today) 
     meal = models.CharField(max_length=1, choices=MEALS, default=MEALS[0][0])
     finch = models.ForeignKey(Finch, on_delete=models.CASCADE)
 

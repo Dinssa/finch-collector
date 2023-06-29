@@ -18,7 +18,7 @@ Finches
         </div>
         <div class="col-6">
             <div class="mt-4 d-flex flex-column justify-content-center align-content-center">
-                <form method="POST" class="mb-3">
+                <form action="{% url 'add_feeding' finch.id %}" method="POST" class="mb-3">
                     {% csrf_token %}
                     {{ feeding_form.as_p }}
                     <input type="submit" class="btn btn-info" value="Add Feeding">
