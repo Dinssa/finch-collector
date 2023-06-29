@@ -15,6 +15,18 @@ Finches
                 <p>Species: {{finch.species}}</p>
                 <p>Age: {{finch.age}}</p>
             </div>
+            <div class="mt-3 text-center">
+                {% if cat.toys.count %}
+                <h1>{{finch.name}}'s Toys</h1>
+                <ul>
+                    {% for toy in finch.toys.all %}
+                    <li>{{toy.name}}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>{{finch.name}} doesn't have any toys yet.</p>
+                {% endif %}
+            </div>
         </div>
         <div class="col-6">
             <div class="mt-4 d-flex flex-column justify-content-center align-content-center">

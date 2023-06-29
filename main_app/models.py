@@ -32,3 +32,15 @@ class Feeding(models.Model):
     class Meta:
         ordering = ['-date']
 
+class Toy(models.Model):
+    name = models.CharField(max_length=100)
+    color = models.CharField(max_length=100)
+
+    finches = models.ManyToManyField(Finch)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('toys_detail', kwargs={'pk': self.id})
+
