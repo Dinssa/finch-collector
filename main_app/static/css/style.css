@@ -50,3 +50,16 @@ table > tbody > tr > td > input, table > tbody > tr > td > textarea {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
 }
+
+.toys-have{
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 30%;
+    color: black;
+}
+
+.toys-have > li{
+    margin-bottom: 0.5rem;
+    padding: 10px;
+    border-radius: 1rem;
+}
