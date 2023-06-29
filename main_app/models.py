@@ -14,6 +14,7 @@ class Finch(models.Model):
     species = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     age = models.IntegerField()
+    toys = models.ManyToManyField('Toy')
 
     def __str__(self):
         return f"{self.name} ({self.id})"
@@ -35,8 +36,6 @@ class Feeding(models.Model):
 class Toy(models.Model):
     name = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
-
-    finches = models.ManyToManyField(Finch)
 
     def __str__(self):
         return self.name
